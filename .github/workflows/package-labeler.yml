@@ -1,0 +1,13 @@
+name: Workspace Package Labeler
+on: [pull_request]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: csi-lk/package-labeler
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          workspace: "packages" # (default)
+          name: "folder" # (default) / 'package.json'
+          prefix: "pkg: "
