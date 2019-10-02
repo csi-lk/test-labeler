@@ -5,9 +5,9 @@ jobs:
   label:
     runs-on: ubuntu-latest
     steps:
-      - uses: csi-lk/package-labeler
+      - uses: csi-lk/package-labeler@releases/v1
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          workspace: "packages" # (default)
-          name: "folder" # (default) / 'package.json'
+          workspace: "packages"
+          name: "folder"
           prefix: "pkg: "
